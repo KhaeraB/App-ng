@@ -1,16 +1,18 @@
 #main {
+  width: 60%;
   margin: 0 auto;
-  width: 80%;
   .listCard {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     .container {
-      background-color: rgba(245, 245, 245, 0.938);
-      width: 300px;
+      background-color: rgba(248, 248, 248, 0.979);
+      width: 30%;
       padding: 5px;
-      margin: 10px;
+      margin: 5px;
+      display: flex;
+      flex-wrap: wrap;
       .card {
         grid-template-columns: repeat(2, 1fr);
         display: grid;
@@ -22,8 +24,8 @@
           }
         }
         .pokemon_info {
-            line-height: 15px;
-            text-align: center;
+          line-height: 5px;
+          text-align: center;
           .btn {
             border: none;
             border-radius: 10px;
