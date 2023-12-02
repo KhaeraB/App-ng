@@ -11,6 +11,7 @@ import { ListPokemonComponent } from './components/list-pokemon/list-pokemon.com
 import { DetailPokemonComponent } from './components/detail-pokemon/detail-pokemon.component';
 import { PokemonTypeColorPipe } from './pipes/pokemon-type-color.pipe';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoaderComponent } from './components/loader/loader.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     DetailPokemonComponent,
     PokemonTypeColorPipe,
     PageNotFoundComponent,
+    LoaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

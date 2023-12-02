@@ -4,9 +4,9 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
   selector: '[pokemonBorderCard]',
 })
 export class BorderCardDirective {
-  private initialColor = '#cfcfcf';
-  private defaultColor = '#009688';
-  private defaultHeight = 150;
+  private initialColor = '#f0d935';
+  private defaultColor = '#ff2926';
+  private defaultHeight = 470;
 
   constructor(private el: ElementRef) {
     this.setBorder(this.initialColor);

@@ -1,26 +1,29 @@
-<div id="main">
-  <div class="listCard">
-    <div *ngFor="let item of pokemonList" class="container" pokemonBorderCard>
-      <div class="card">
-        <div class="pokemon_img">
-          <img src="{{ item.picture }}" alt="{{ item.name }}" />
-        </div>
-        <div class="pokemon_info">
-          <h3>{{ item.name }}</h3>
-          <p>
-            <small>{{ item.created | date: "dd/MM/yy" }}</small>
-          </p>
-          <div *ngFor="let type of item.types">
-            <button
-              class="btn"
-              *ngIf="type"
-              [style.background-color]="type | pokemonTypeColor"
-            >
-              {{ type }}
-            </button>
+<main>
+  <div class="container">
+    <div *ngFor="let item of pokemonList">
+      <div class="card" pokemonBorderCard>
+        <img
+          class="card-img-top"
+          src="{{ item.picture }}"
+          alt="{{ item.name }}"
+          [style.background-color]="item.types[0] | pokemonTypeColor"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.created | date: "dd/MM/yy" }}</p>
+          <div class="typesStyle">
+            <div *ngFor="let type of item.types" class="type">
+              <button
+                class="btn"
+                *ngIf="type"
+                [style.background-color]="type | pokemonTypeColor"
+              >
+                {{ type }}
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</main>
