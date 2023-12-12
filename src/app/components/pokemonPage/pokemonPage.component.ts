@@ -9,15 +9,10 @@ import { Pokemon } from 'src/app/model/pokemon';
   templateUrl: './pokemonPage.component.html',
   styleUrls: ['./pokemonPage.component.scss'],
 })
-export class PokemonPageComponent implements OnInit {
+export class PokemonPageComponent {
   pokemonList: Pokemon[] = POKEMONS;
   enum: typeof TypeColor = TypeColor;
   selectPokemonName: string;
-  route = ActivatedRoute;
-
-  ngOnInit() {
-    // let pokemonId = this.route.snapshot.params['id'];
-  }
 
   getColorForType(type: string) {
     return (this.enum as any)[type] || 'transparent';

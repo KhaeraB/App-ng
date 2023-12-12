@@ -8,9 +8,13 @@
           alt="{{ item.name }}"
           [style.background-color]="item.types[0] | pokemonTypeColor"
         />
-        <div class="card-body">
-          <h5 class="card-title">{{ item.name }}</h5>
-          <p class="card-text">{{ item.created | date: "dd/MM/yy" }}</p>
+        <div class="card-body text-center">
+          <h5 class="card-title">
+            <b>{{ item.name }}</b>
+          </h5>
+          <p class="card-text">
+            Date de création : {{ item.created | date: "dd/MM/yy" }}
+          </p>
           <div class="typesStyle">
             <div *ngFor="let type of item.types" class="type">
               <button
